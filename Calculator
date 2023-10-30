@@ -1,0 +1,51 @@
+package com.uday.www;
+
+import java.util.Scanner;
+
+public class Test4 
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
+		double n1,n2,result;
+		char operator;
+		
+		System.out.println("Enter Number1");
+		n1=sc.nextDouble();
+		
+		System.out.println("Enter the Operator you want (+, -, *, /):");
+		operator = sc.next().charAt(0);
+		
+		System.out.println("Enter Number2");
+		n2=sc.nextDouble();
+		
+		switch(operator)
+		{
+		case '+':result=n1+n2;System.out.println("Result:"+result);break;
+		case '-':result=n1-n2;System.out.println("Result:"+result);break;
+		case '*':result=n1*n2;System.out.println("Result:"+result);break;
+		case '/':
+            if (n2 != 0) 
+            {
+                result = n1 / n2;
+                System.out.println("Result: " + result);
+            } 
+            else
+            {
+                System.out.println("Error: Division by zero is not allowed.");
+            }
+            break;
+        default:
+            System.out.println("Invalid operator. Please enter a valid operator (+, -, *, /).");
+		
+		}
+		
+		
+		
+
+	}
+
+}
